@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            font-family: 'Helvetica Now Display';
+            padding: 0;
+            margin: 0;
+        }
+
+        .sortButton {
+            margin-left: 60px;
+        }
+
+        .sortButton button {
+            margin: 0;
+            border-radius: 15px 15px 0px 0px;
+            cursor: pointer;
+            padding: 20px;
+            border: none;
+            font-size: 40px;
+            background-color: transparent;
+        }
+
+        .products {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 60px;
+            background-color: #171614 ;
+        }
+
+
+        .productflex {
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            margin-bottom: 40px;
+            column-gap: 40px;
+            justify-content: center;
+            font-size: 30px;
+        }
+        
+        .productcard {
+            display: none;
+            flex: 1;
+            background-color: #fff;
+            text-align: center;
+            padding: 0px 30px;
+            padding-bottom: 40px;
+            border-radius : 20px;
+        }
+
+        .productflex.show .productcard {
+            display: block;
+        }
+
+        .productcard h2 {
+            font-size: 30px;
+        }
+        
+
+        .productcard img {
+            height: 250px;
+            width: 250px;
+            object-fit: contain;
+        }
+
+        .productcard button {
+            border: none;
+            border-radius: 40px;;
+            padding: 10px 40px;
+            font-size: 30px;
+            font-weight: 700;
+            background-color: #E86A33;
+            color: #fff;
+        }
+
+        .offers {
+            padding: 50px;
+            height : 500px;
+        }
+
+        .offerImg {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            background-color: gray;
+        }
+
+        .dropbtn {
+            background-color: #09682e;
+            height: 60px;
+            width: 200px;
+            color: white;
+            text-transform: uppercase;
+            font-size: 18px;
+            border: none;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            
+        }
+        /* hiding disolay of anker tags to hide the links initially */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            font-size: 16px;
+
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* after hover showing links that were hidden intially to go to oages where products are shorted by orders */
+        .dropdown-content a:hover {
+            background-color: #171614;
+            color: #f2f2f2;
+            border-radius: 30px;
+        }
+        
+        .dropdown:hover .dropdown-content {display: block;}
+        
+        .dropdown:hover .dropbtn {background-color: #E86A33;}        
+
+    </style>
+
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <p class="logo">logo</p>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="..index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="research.html">Research</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="html/login.html"><button>Login</button></a>
+    </header>
+
+
+
+    <div class="offers">
+        <div class="offerImg">
+            
+        </div>
+    </div>
+
+
+    <div class="sortButton">
+        <button id="button1" onclick="showAllPrinters(); changeColor('button1')" style="background-color: #171614; color: #fff;">ALL</button>
+        <button id="button2" onclick="showPrinters('canonPrinters'); changeColor('button2')">CANON</button>
+        <button id="button3" onclick="showPrinters('hpPrinters'); changeColor('button3')">HP</button>
+        <button id="button4" onclick="showPrinters('epsonPrinters'); changeColor('button4')">EPSON</button>
+
+        <div class="dropdown">
+            <button class="dropbtn" style="color: #171614;">Sort</button>
+            <div class="dropdown-content">
+              <a href="priceascending.html" style="text-decoration: none;">Price ascending</a>
+              <a href="pricedescending.html" style="text-decoration: none;">Price descending</a>
+              <a href="brand.html" style="text-decoration: none;">Brand (A - Z)</a>
+            </div>
+          </div>
+    </div>
+
+    
+
+    <div class="products">
+    <div class="productflex show" id="canonPrinters">
+
+        
+        <div class="productcard">
+            <h2>Canon 3D</h2>
+            <p>Rs:46,999</p>
+        
+            <img src="./images/canon3d.jpg" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+
+
+        <div class="productcard">
+            <h2>Canon Laser </h2>
+            <p>Rs:24,999</p>
+        
+            <img src="./images/dotmatrix.webp" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+
+
+        <div class="productcard">
+            <h2>Canon Inkjet</h2>
+            <p>Rs:12,999</p>
+        
+            <img src="./images/cannoninkjet.png" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+
+    </div>
+
+    <div class="productflex show" id="hpPrinters">
+
+
+        <div class="productcard">
+            <h2>HP 3D</h2>
+            <p>Rs:46,999</p>
+        
+            <img src="./images/HP 3d.webp" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+
+        <div class="productcard">
+            <h2>HP Laser </h2>
+            <p>Rs:24,999</p>
+        
+            <img src="./images/hplaser.jpeg" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+
+        <div class="productcard">
+            <h2>HP inkjet</h2>
+            <p>Rs:12,999</p>
+        
+            <img src="./images/hpinkjet.avif" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+        
+    </div>
+
+    <div class="productflex show" id="epsonPrinters">
+
+
+        <div class="productcard">
+            <h2>Epson 3D</h2>
+            <p>Rs:46,999</p>
+        
+            <img src="./images/epson3d.jpg" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+
+        <div class="productcard">
+            <h2>Epson Laser </h2>
+            <p>Rs:24,999</p>
+        
+            <img src="./images/epsonlaser.jpg" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+
+        <div class="productcard">
+            <h2>Epson Inkjet</h2>
+            <p>Rs:12,999</p>
+        
+            <img src="./images/epsoninkjet.jpg" alt="Printer">
+            <button type="button" onclick="itemadded()">ADD TO CART</button>
+        </div>
+        
+    </div>
+    </div>
+
+</body>
+
+
+<script>
+
+    function showAllPrinters() {
+        //Show all product categories 
+        var productFlexContainers = document.querySelectorAll('.productflex');
+        productFlexContainers.forEach(function(container) {
+            container.classList.add('show');
+        });
+    }
+
+
+    function showPrinters(category) {
+        //Hide all product categories
+        var productFlexContainers = document.querySelectorAll('.productflex');
+        productFlexContainers.forEach(function(container) {
+            container.classList.remove('show');
+        });
+
+        //show the selected category
+        var selectedCategory = document.getElementById(category);
+        if (selectedCategory) {
+            selectedCategory.classList.add('show');
+        }
+
+
+    }
+
+    var activeButtonId = 'button1';
+
+    function changeColor(buttonId) {
+        var button = document.getElementById(buttonId);
+
+        // Add your desired background color here
+        var bgColor = "#171614"; // Red color as an example
+        var textColor = "#f2f2f2"
+        // Reset the color of the previously active button
+        if (activeButtonId !== null) {
+            var prevActiveButton = document.getElementById(activeButtonId);
+            prevActiveButton.style.backgroundColor = "";
+            prevActiveButton.style.color = "#171614";
+        }
+
+        // Set the color of the currently clicked button
+        button.style.backgroundColor = bgColor;
+        button.style.color = textColor
+
+        // Update the activeButtonId
+        activeButtonId = buttonId;
+    }
+
+</script>
+
+
+</html>
+

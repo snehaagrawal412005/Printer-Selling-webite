@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+
+    <style>
+        body{
+            font-family: 'Helvetica Now Display';
+            background-color: #F2F2F2;
+            overflow-x: hidden;
+        }
+
+        .landing_content {
+            text-align: center;
+            margin: auto;
+            padding: 50px 0px;
+            width:80%;
+
+        }
+
+        h1{
+            font-size: 55px;
+            font-weight: 800;
+            color: #F2F2F2;
+        }
+        
+
+        .vector1{
+            width: 100%;
+        }
+
+        .buyButton {
+            text-align: center;
+        }
+
+        .buyNow {
+            width: 160px;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 1000;
+            background-color: #F2F2F2;
+            border-radius: 7px;
+        }
+
+        
+
+        .pic1 {
+            object-fit: contain;
+        }
+
+
+        .pic1 img {
+            height: 300px;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <p class="logo"><img src="images/saunlogo.png"></p>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="html/products.html">Products</a></li>
+                <li><a href="html/blog.html">Blog</a></li>
+                <li><a href="html/aboutus.html">About Us</a></li>
+                <li><a href="html/research.html">Research</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="html/login.html"><button>Login</button></a>
+    </header>
+
+    <div class="landing">
+        
+        <div class="landing_content">
+            <h1>SEAMLESS PRINTING,</h1>
+            <h1>LIMITLESS POTENTIAL</h1>
+        </div>
+        <div class="buyButton">
+        <button class="buyNow">BUY NOW</button>
+        </div>
+    </div>
+
+    <div class="slanted">
+        <img src="images/Layer 2 1.png">
+    </div>
+
+ <!--Section 2-->
+    <div class="Sold">
+        <div>
+            <h2>WHAT WE SELL</h2>
+        </div>
+        <div class="soldItems">
+            <ul class="itemsNav">
+                <li><button id="button1" style="background-color: #171614; color: #F2F2F2;" onclick = "showSlide(0); changeColor('button1')">Inkjet Printers</button></li>
+                <li><button id="button2" onclick = "showSlide(1); changeColor('button2')">Laser Printers</button></li>
+                <li><button id="button3" onclick = "showSlide(2); changeColor('button3')">3D Printers</button></li>
+            </ul>
+        </div>
+
+        <div id="carousel">
+
+            <div class="slider">
+                <div class="halfOne">
+                    <h2>Inkjet Printers</h2>
+                    <p>Brilliant color. Sharp detail. Our Inkjet Printers redefine printing for vivid images and efficient performance.</p>
+                    <button class="buyNow">BUY NOW</button>
+                </div>
+                <div class="halfTwo">
+                    <img src="images/inkjet.webp">    
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="halfOne">
+                    <h2>Laser Printers</h2>
+                    <p>Speed meets precision. Our Laser Printers deliver rapid, high-quality prints for businesses that demand efficiency.</p>
+                    <button class="buyNow">BUY NOW</button>
+                </div>
+                <div class="halfTwo">
+                    <img src="images/laser.webp">    
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="halfOne">
+                    <h2>3D Printers</h2>
+                    <p>Ignite creativity. Our 3D Printers turn concepts into reality, empowering makers to bring ideas to life effortlessly.</p>
+                    <button class="buyNow">BUY NOW</button>
+                </div>
+                <div class="halfTwo">
+                    <img src="images/3d2.jpg">    
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <div style="text-align: center;">
+        <h2 style="font-size: 50px;">OUR CLIENTS</h2>
+    </div>
+
+    
+    <!--Section 3-->
+    <div class="marquee-container">
+    
+        <div class="marquee-content">
+            <img src="images/coca-cola-logo.png">
+            <img src="images/microsoft logo.png">
+            <img src="images/lenovo logo.png">
+            <img src="images/figma logo.png">
+
+            <img src="images/coca-cola-logo.png">
+            <img src="images/microsoft logo.png">
+            <img src="images/lenovo logo.png">
+            <img src="images/figma logo.png">
+        </div>
+
+    </div>
+    
+    <!--Section 4-->
+    <div class="aboutUs">
+        <h2 style="font-size: 50px;">MEET THE TEAM</h2>
+
+        <div class="teamPic">
+            <div class="pic1"><div><p>BISHES MAHARJAN</p></div></div>
+            <div class="pic1"><div><p>BISAKHA TULADHAR</p></div></div>
+            <div class="pic1"><div><p>DIBASH SIGDEL</p></div></div>
+            <div class="pic1"><div><p>SNEHA AGARWAL</p></div></div>
+        </div>
+
+        <button style="border-style: solid; font-size: 20px;">LEARN MORE</button>
+    </div>
+
+
+    
+
+
+    <footer>
+        <div class="footer">
+            <p>Saundarya: Where Beauty Meets Print. Elevate your visual experience with our artfully crafted prints, where each stroke captures the essence of beauty and transforms every piece into a masterpiece.</p>
+            <p>saundarya@gmail.com</p>
+            <p>Instagram</p>
+        </div>
+        <div class="Title">
+            <h1>Saundarya</h1>
+        </div>
+    </footer>
+    
+</body>
+
+<script>
+    let currentIndex = 0;
+    const sliderContainer = document.getElementById('carousel')
+    const sliderItems = document.querySelectorAll('.slider');
+
+    function showSlide(index) {
+        if(index < 0 || index >= sliderItems.length || index === currentIndex) {
+            return;
+        }
+
+        currentIndex = index;
+        const translateValue = -currentIndex * 33.333333 + '%';
+        sliderContainer.style.transform = 'translateX(' + translateValue +')';
+    }
+        
+
+</script>
+<script src="javascript/javascript.js"></script>
+
+</html>

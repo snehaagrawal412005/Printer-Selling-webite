@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Now Display', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+}
+
+li, a, button {
+    font-family: 'Helvetica Now Display';
+    font-weight: 700;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #FF7A00 ;
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+   
+    object-fit: contain;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+}
+
+.nav_links li a {
+    color: #f2f2f2;
+    padding: 0px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    padding: 10px;
+    color: #171614;
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    color: #181818;
+    font-weight: bold;
+}
+
+.landing {
+    background-image: url("../images/Frame\ 2\ \(1\).png");
+    height: 700px;
+}
+
+.landing_content {
+    margin-bottom: 400px;
+}
+
+.slanted {
+    position: absolute;
+    top: 600px;
+}
+
+.slanted img{
+    width: 300px;
+}
+
+.Sold {
+    text-align: center;
+    height: 800px;
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+.soldItems {
+    margin-top: 40px;
+}
+
+.itemsNav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.itemsNav button {
+    font-size: 25px;
+    border-radius: 50px;
+}
+
+
+#carousel {
+    width: 300%;
+    display: flex;
+    position : relative;
+    transition : transform 0.7s ease-in-out;
+}
+
+.slider {
+    width: 1300px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    padding: 0 100px;
+    display: flex;
+}
+
+.halfOne {
+    flex: 45%;
+    height: 500px;
+    padding: 60px 50px;
+    text-align: left;
+    background-color: #171614;
+    color: #f2f2f2;
+}
+
+.halfOne p {
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.halfOne button {
+    margin-top: 40px;
+    height: 50px;
+    background-color: transparent;
+    color: #f2f2f2;
+    font-size: 17px;
+    border-style: solid;
+    border-color: #f2f2f2;
+}
+
+.halfTwo {
+    flex: 55%;
+    height: 500px;
+    background-color: #E86A33;
+    background-image: url(images/inkjet.webp);
+}
+
+.halfTwo img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.marquee-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+}
+
+.marquee-content img {
+    width: 100%;
+    height: 150px;
+    object-fit:contain;
+    padding: 40px 40px;
+    filter: saturate(0);
+}
+
+/*
+@keyframes scroll {
+    from {
+        transform : translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+*/
+
+.scroll {
+    animation: scroll 15s linear infinite;
+}
+
+.aboutUs {
+    text-align: center;
+    margin: 50px;
+}
+
+.teamPic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.teamPic .pic1 {
+    width: 250px;
+    height: 400px;
+    background: url(images/inkjet.webp);
+    background-size: auto;
+    
+}
+
+
+.teamPic .pic1 div {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 200px;
+    text-align: center;
+    background-color: #171614;
+    transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
+}
+
+.teamPic .pic1 div:hover {
+    color: #f2f2f2;
+    background-color: rgb(23, 22, 20,0.7);
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    padding: 40px;
+    background-color: #171614;
+    color: #f2f2f2;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer p{
+    flex: 30%;
+}
+
+.Title{
+    position: absolute;
+    top: 180px;
+}
+
+.Title h1{
+    font-size: 240px;
+}
+
